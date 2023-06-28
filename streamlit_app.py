@@ -10,6 +10,8 @@ streamlit.text('🥑🍞Avocado Toast')
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
+# '#' is used for commenting
+
 # Let's start using another Python package library. This one is called pandas, and it's very well known among Python developers.  Streamlit includes pandas as part of their core application so we don't need to do anything special except type:
 import pandas
 
@@ -19,8 +21,9 @@ my_fruit_list=pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/
 # After pulling the data into a pandas dataframe called my_fruit_list, we will ask the streamlit library to display it on the page by typing:
 streamlit.dataframe(my_fruit_list)
 
-# We'll add a user interactive widget called a Multi-select that will allow users to pick the fruits they want in their smoothies. Let's put a pick list here so they can pick the fruit they want to include ; # is used for commenting
+# We'll add a user interactive widget called a Multi-select that will allow users to pick the fruits they want in their smoothies. Let's put a pick list here so they can pick the fruit they want to include ; 
 streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index))
 
 # Display the table on the page.
+streamlit.dataframe(my_fruit_list)
 
